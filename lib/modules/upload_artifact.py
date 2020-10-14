@@ -13,10 +13,10 @@ files={
     'file': ('dhl-commons-qa-40.20-7.jar',open('/tmp/dhl-commons-qa-40.20-7.jar','rb'))
 }
 
-response=req.post('http://nexus-ua2.dhl-ewf.kyiv.epam.com/service/local/artifact/maven/content',files=files,auth=('admin','owah6eeL'));
+response=req.post('http://nexus-ua2.local/service/local/artifact/maven/content',files=files,auth=('admin','PassWord'));
 print(response)
 
-# response=requests.post('http://czcholsint969.prg-dc.dhl.com/nexus/service/local/artifact/maven/content',files=files,auth=('admin','owah6eeL'));
+# response=requests.post('http://czcholsint969.prg-dc.dhl.com/nexus/service/local/artifact/maven/content',files=files,auth=('admin','PassWord'));
 # print(response)
 
-# curl -X POST "http://nexus-ua2.dhl-ewf.kyiv.epam.com/service/rest/v1/components?repository=other" -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -F "maven2.groupId=com.dhl.ewf.esb.commons" -F "maven2.artifactId=dhl-commons" -F "maven2.version=qa-40.20-7" -F "maven2.generate-pom=true" -F "maven2.packaging=jar" -F "maven2.asset1=@dhl-commons-qa-40.20-7.jar;type=application/java-archive" -F "maven2.asset1.extension=jar"
+# curl -X POST "http://nexus-ua2.local/service/rest/v1/components?repository=other" -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -F "maven2.groupId=com.dhl.ewf.esb.commons" -F "maven2.artifactId=dhl-commons" -F "maven2.version=qa-40.20-7" -F "maven2.generate-pom=true" -F "maven2.packaging=jar" -F "maven2.asset1=@dhl-commons-qa-40.20-7.jar;type=application/java-archive" -F "maven2.asset1.extension=jar"

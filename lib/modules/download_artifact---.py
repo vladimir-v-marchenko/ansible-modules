@@ -322,7 +322,7 @@ def main():
             extension = dict(default='jar'),
             repository_url = dict(default=None),
             username = dict(default="admin"),
-            password = dict(default="owah6eeL", no_log=True),
+            password = dict(default="PassWord", no_log=True),
             state = dict(default="present", choices=["present", "absent"]),
             timeout = dict(default=10, type='int'),
             dest = dict(type="path", default=None),

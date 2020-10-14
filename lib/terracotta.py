@@ -38,11 +38,11 @@ r.open('GET', 'http://httpbin.org/cookies/set?k1=v1').read()
 
 # def __login():
 #     # Request
-#     # POST https://aqatwin2.tc-1.dhl-ewf.kyiv.epam.com:9443/tmc/login.jsp
+#     # POST https://aqatwin2.tc-1.local:9443/tmc/login.jsp
 
 #     try:
 #         response = requests.post(
-#             url="https://aqatwin2.tc-1.dhl-ewf.kyiv.epam.com:9443/tmc/login.jsp",
+#             url="https://aqatwin2.tc-1.local:9443/tmc/login.jsp",
 #             headers={
 #                 "Accept": "text/html,application/xml",
 #                 "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
@@ -68,11 +68,11 @@ r.open('GET', 'http://httpbin.org/cookies/set?k1=v1').read()
 
 # def send_request():
 #     # Request (2)
-#     # POST https://aqatwin2.tc-1.dhl-ewf.kyiv.epam.com:9443/tmc/api/agents/cacheManagers/caches
+#     # POST https://aqatwin2.tc-1.local:9443/tmc/api/agents/cacheManagers/caches
 
 #     try:
 #         response = requests.post(
-#             url="https://aqatwin2.tc-1.dhl-ewf.kyiv.epam.com:9443/tmc/api/agents/cacheManagers/caches",
+#             url="https://aqatwin2.tc-1.local:9443/tmc/api/agents/cacheManagers/caches",
 #             headers={
 #                 "Cookie": "",
 #             },
