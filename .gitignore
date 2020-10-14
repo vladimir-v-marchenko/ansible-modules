@@ -127,3 +127,50 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+tools/*_count
+target
+.sonar
+.scannerwork
+.DS_Store
+# Ignore python object files
+*.py[cod]
+*.sublime-workspace
+# VIm
+*.sw[po]
+# EMACs
+~
+*.pyc
+# IntelliJ IDEA
+.idea/*
+*.iml
+# Ansible specific
+*.retry
+configs*/
+logs/*
+logs.*.zip
+ansible.log
+ansible-lint.log
+ansible-check.log
+migration.log
+migration_log.zip
+report_parts/*
+graph.html
+table.html
+report.html
+checks/report_parts/*
+*.out
+#pyenv
+#.python-version
+.sonar*
+library/.sonar*
+.venv
+.virtualenv
+__pycache__
+__pycache__/**
+.vscode
+.vscode/**
+.metals
+.metals/**
+nexus_upload_logs.txt
+.scannerwork/**
+target/**

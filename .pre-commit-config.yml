@@ -1,0 +1,11 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: master
+    hooks:
+      - id: check-yaml
+      - id: check-xml
+  - repo: https://github.com/ansible/ansible-lint
+    rev: master
+    hooks:
+      - id: ansible-lint

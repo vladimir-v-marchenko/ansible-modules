@@ -1,0 +1,18 @@
+exclude_paths:
+  - ./tools
+  - ./plugins/mitogen
+  - ./roles/terracotta.*
+parseable: true
+quiet: true
+rulesdir:
+  - ./tools/ansible-lint/rules
+skip_list:
+  - ANSIBLE0006
+  - ANSIBLE0010
+  - ANSIBLE0011
+  - ANSIBLE0012
+  - ANSIBLE0013
+  - ANSIBLE0016
+use_default_rules: false
+force_color: true
+verbosity: 3
