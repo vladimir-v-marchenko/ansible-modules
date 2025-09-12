@@ -13,9 +13,9 @@ jobs:
       - name: Run ansible-lint
         uses: ansible/ansible-lint@main # or vX.X.X version
         # optional (see below):
-        with:
+#        with:
 #          args: ""
 #          gh_action_ref: "<version - e.g. `v25.5.0`>" # Not recommended for non-composite action use
 #          setup_python: "true"
 #          working_directory: ""
-          requirements_file: "requirements.txt"
+#          requirements_file: "requirements.txt"
