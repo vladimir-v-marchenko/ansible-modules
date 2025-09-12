@@ -2,6 +2,7 @@
 name: ansible-lint
 on:
   workflow_dispatch:
+  
   pull_request:
     branches: ["main", "stable", "release/v*"]
 jobs:
@@ -10,6 +11,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip' # caching pip dependencies
+      - run: pip install -r requirements.txt
       - name: Run ansible-lint
         uses: ansible/ansible-lint@main # or vX.X.X version
         # optional (see below):
