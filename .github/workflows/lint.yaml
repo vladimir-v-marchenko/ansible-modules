@@ -1,19 +1,17 @@
 name: Python-lint
 on:
   workflow_dispatch:
+
   pull_request:
     branches: ["main", "stable", "release/v*", '*']
+
 jobs:
-  build:
-    name: Python lint
-    runs-on: ubuntu-24.04
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        linter: [flake8, pylint, ruff, mypy, pytype, pyright, fixit, pyre]
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/ruff-action@v3
+      - uses: advanced-security/python-lint-code-scanning-action@v1
         with:
-          # Optional: specify the version of ruff to use (default: latest)
-          version: '0.0.300'
-          # Optional: specify the directory to run ruff in (default: root of the repository)
-          directory: '.'
-          # Optional: specify additional arguments to pass to ruff
-          args: '--fix'
+          linter: ${{ matrix.linter }}
