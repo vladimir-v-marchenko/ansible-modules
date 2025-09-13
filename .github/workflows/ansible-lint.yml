@@ -1,21 +1,20 @@
 # .github/workflows/ansible-lint.yml
-name: ansible-lint
+name: Python-lint
 on:
   workflow_dispatch:
   pull_request:
-    branches: ["main", "stable", "release/v*"]
+    branches: ["main", "stable", "release/v*", '*']
 jobs:
   build:
-    name: Ansible Lint # Naming the build is important to use it as a status check
+    name: Python lint
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Run ansible-lint
-        uses: ansible/ansible-lint@main # or vX.X.X version
-        # optional (see below):
+      - uses: astral-sh/ruff-action@v3
         with:
-#          args: ""
-#          gh_action_ref: "<version - e.g. `v25.5.0`>" # Not recommended for non-composite action use
-#          setup_python: "true"
-#          working_directory: ""
-          requirements_file: "requirements.txt"
+          # Optional: specify the version of ruff to use (default: latest)
+          version: '0.0.300'
+          # Optional: specify the directory to run ruff in (default: root of the repository)
+          directory: '.'
+          # Optional: specify additional arguments to pass to ruff
+          args: '--fix'
